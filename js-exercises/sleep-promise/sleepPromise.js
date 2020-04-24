@@ -1,8 +1,8 @@
 function sleep(ms) {
-  const promise = new Promise(res => setTimeout(res, ms));
-  const innerFunction = (value) => promise.then(() => value);
-  innerFunction.then = promise.then.bind(promise);
-  innerFunction.catch = promise.catch.bind(promise);
+  const waitPromise = new Promise(res => setTimeout(res, ms));
+  const innerFunction = (value) => waitPromise.then(() => value);
+  innerFunction.then = waitPromise.then.bind(waitPromise);
+  innerFunction.catch = waitPromise.catch.bind(waitPromise);
   return innerFunction;
 }
 export {
