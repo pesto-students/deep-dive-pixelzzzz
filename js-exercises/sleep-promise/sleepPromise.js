@@ -5,6 +5,4 @@ function sleep(ms) {
   innerFunction.catch = waitPromise.catch.bind(waitPromise);
   return innerFunction;
 }
-export {
-  sleep,
-};
+export { sleep };
