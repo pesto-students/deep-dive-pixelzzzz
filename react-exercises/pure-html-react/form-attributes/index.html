@@ -3,9 +3,15 @@ Disable the input field. -->
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Disable</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
   <body>
     <form>
-      First name: <input type="text" name="firstname" value="John" disabled />
+      <label for="firstname">First name:</label>
+      <input id="firstname" type="text" name="firstname" value="John" disabled />
       <input type="submit" />
     </form>
   </body>
